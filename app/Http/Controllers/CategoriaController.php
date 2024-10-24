@@ -27,7 +27,8 @@ class CategoriaController extends Controller
     }
 
     public function destroy($id){
-        Categoria::destroy($id);
+        $categoria = Categoria::findOrFail($id);
+        $categoria->delete($id);
         return response()->json("Deletado com sucesso!");
     }
 }

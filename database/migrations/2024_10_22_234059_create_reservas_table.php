@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('reservas', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('id_client');
+            $table->unsignedBigInteger('id_cliente');
             $table->unsignedBigInteger('id_veiculo');
             $table->date('date_retirada');
             $table->date('data_devolucao');
